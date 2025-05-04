@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelCoin</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <div class="top-bar">
+        <div class="cont-image-name">
+            <img src="assets/images/test-ava.jpg" alt="">
+            <div class="cont-name">
+                <h3>Friendly Fox</h3>
+                <p>id: 2917263612</p>
+            </div>
+        </div>
+        <div class="balance">
+            <p style="margin-right: 10px;">Доход:</p>
+            <div class="income-value">0</div>
+        </div>
+    </div>
+    
+    <div class="main-container" id="home">
+        <div class="cont-bs">
+            <div class="balance-value">0</div>
+            <div class="rang"><img class="icon-m" src="assets/images/left.png" alt=""><p style="margin-left: 5px;margin-right: 5px;font-size: 18px;">100,45th</p><img class="icon-m" style="margin-right: 10px;" src="assets/images/right.png" alt=""> <p style="font-size: 18px;">·</p> <p style="font-size: 18px; margin-left: 10px;">Bronze</p></div>
+        </div>
+        <div class="clicker-container">
+            <div class="clicker" id="clicker"></div>
+        </div>
+        <div class="cont-energy">
+            <div class="icon-value">
+                <img src="assets/images/energy.png" alt="">
+                <div class="value">
+                    <h3>1000</h3>
+                    <p>/ 1000</p>
+                </div>
+            </div>
+            <div class="progress-container">
+                <div style="width: 100%;" class="progress-bar" id="progressBar"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Мем биржа страница -->
+    <div class="page" id="meme-market">
+        <div class="page-title">Мем Биржа</div>
+        <div class="meme-list">
+            <div class="meme-item">
+                <div class="meme-image">🐱</div>
+                <div class="meme-name">Кот-программист</div>
+                <div class="meme-price">
+                    <span>Цена: 50</span>
+                    <span>+0.5/сек</span>
+                </div>
+                <button class="meme-buy" data-price="50" data-income="0.5">Купить</button>
+            </div>
+            <div class="meme-item">
+                <div class="meme-image">🚀</div>
+                <div class="meme-name">To The Moon</div>
+                <div class="meme-price">
+                    <span>Цена: 200</span>
+                    <span>+2/сек</span>
+                </div>
+                <button class="meme-buy" data-price="200" data-income="2">Купить</button>
+            </div>
+            <div class="meme-item">
+                <div class="meme-image">🦍</div>
+                <div class="meme-name">Diamond Hands</div>
+                <div class="meme-price">
+                    <span>Цена: 500</span>
+                    <span>+5/сек</span>
+                </div>
+                <button class="meme-buy" data-price="500" data-income="5">Купить</button>
+            </div>
+            <div class="meme-item">
+                <div class="meme-image">🧠</div>
+                <div class="meme-name">Big Brain</div>
+                <div class="meme-price">
+                    <span>Цена: 1000</span>
+                    <span>+10/сек</span>
+                </div>
+                <button class="meme-buy" data-price="1000" data-income="10">Купить</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Рефералы страница -->
+    <div class="page" id="referrals">
+        <div class="page-title">Рефералы</div>
+        <div class="referral-code">
+            <div>Ваш реферальный код</div>
+            <input type="text" value="PIXEL123" readonly>
+        </div>
+        <div class="referral-stats">
+            <div class="stat">
+                <div>Всего рефералов:</div>
+                <div>0</div>
+            </div>
+            <div class="stat">
+                <div>Активных рефералов:</div>
+                <div>0</div>
+            </div>
+            <div class="stat">
+                <div>Доход от рефералов:</div>
+                <div>0/сек</div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Профиль страница -->
+    <div class="page" id="profile">
+        <div class="page-title">Профиль</div>
+        <div class="profile-card">
+            <div class="profile-header">
+                <div class="profile-avatar">👾</div>
+                <div class="profile-info">
+                    <div class="profile-username">Пользователь</div>
+                    <div class="profile-id">ID: 12345678</div>
+                </div>
+            </div>
+            <div class="profile-stats">
+                <div class="profile-stat">
+                    <div>Всего кликов</div>
+                    <div class="stat-value total-clicks">0</div>
+                </div>
+                <div class="profile-stat">
+                    <div>Всего монет</div>
+                    <div class="stat-value total-coins">0</div>
+                </div>
+                <div class="profile-stat">
+                    <div>Мемов куплено</div>
+                    <div class="stat-value total-memes">0</div>
+                </div>
+                <div class="profile-stat">
+                    <div>Уровень</div>
+                    <div class="stat-value">1</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-menu">
+        <a href="#" class="menu-item active" data-page="home">
+            <div class="menu-icon"><dotlottie-player src="https://lottie.host/23aaaa71-54b3-45de-827a-5f01dacde48b/H07puTBnj1.lottie" background="transparent" speed="1" style="width: 40px; height: 40px" loop autoplay></dotlottie-player></div>
+            <div style="font-size: 15px;">Главная</div>
+        </a>
+        <a href="#" class="menu-item" data-page="meme-market">
+            <div class="menu-icon"><dotlottie-player src="https://lottie.host/bbce2fbd-0a02-421d-bcee-1c6fc60067cd/7k0eVBbdhQ.lottie" background="transparent" speed="1" style="width: 40px; height: 40px" loop autoplay></dotlottie-player></div>
+            <div style="font-size: 15px;">Мем Биржа</div>
+        </a>
+        <a href="#" class="menu-item" data-page="referrals">
+            <div class="menu-icon"><dotlottie-player src="https://lottie.host/3106a8f7-a617-4c19-a6ee-e8bc20aa26be/JZsbyWcFyq.lottie" background="transparent" speed="1" style="width: 40px; height: 40px" loop autoplay></dotlottie-player></div>
+            <div style="font-size: 15px;">Рефералы</div>
+        </a>
+        <a href="#" class="menu-item" data-page="profile">
+            <div class="menu-icon"><dotlottie-player src="https://lottie.host/674cff79-9bce-468f-80a3-66b50012b36f/BMAi3WukS8.lottie" background="transparent" speed="1" style="width: 40px; height: 40px" loop autoplay></dotlottie-player></div>
+            <div style="font-size: 15px;">Профиль</div>
+        </a>
+    </div>
+    
+    <script src="assets/js/scripts.js"></script>
+    <script
+  src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+  type="module"
+></script>
+</body>
+</html>
