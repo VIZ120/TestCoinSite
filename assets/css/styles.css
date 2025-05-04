@@ -23,6 +23,25 @@
             min-height: 100vh;
             background-attachment: fixed;
         }
+
+        /* Запрет выделения для всех изображений */
+        img {
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -webkit-touch-callout: none;
+            -webkit-user-drag: none; /* Блокировка перетаскивания */
+            draggable: false;
+        }
+        
+        /* Дополнительно убираем выделение для псевдоэлементов */
+        ::selection {
+            background: transparent;
+        }
+        ::-moz-selection {
+            background: transparent;
+        }
         
         .top-bar {
             display: flex;
