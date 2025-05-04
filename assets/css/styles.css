@@ -54,15 +54,14 @@
         }
         
         .balance {
-            display: flex
-            ;
-                align-items: center;
-                width: 100%;
+            display: flex;
+            align-items: center;
+            width: 100%;
         }
         
         .balance-value {
             color: #ffff;
-            font-size: 40px;
+            font-size: clamp(32px, 8vw, 40px);
             font-weight: bold;
         }
         
@@ -86,11 +85,12 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            width: 90%;
         }
 
         .cont-energy {
             position: absolute;
-            bottom: 0;
+            bottom: 2vh;
             left: 1.5rem;
             right: 1.5rem;
         }
@@ -102,17 +102,17 @@
         }
 
         .icon-value img {
-            width: 28px;
+            width: clamp(24px, 6vw, 28px);
             margin-right: 10px;
         }
 
         .value h3 {
-            font-size: 25px;
+            font-size: clamp(20px, 5vw, 25px);
             font-weight: 500;
         }
 
         .value p {
-            font-size: 16px;
+            font-size: clamp(14px, 3.5vw, 16px);
             font-weight: 200;
             color: #d6d6d6;
         }
@@ -127,7 +127,7 @@
         
         .progress-bar {
             height: 100%;
-            width: 100%; /* Начальное значение (можно менять через HTML) */
+            width: 100%;
             background: linear-gradient(to right, #0c61e2 3%, #5090ff 80%, #ffffff);
             border-radius: 20px;
             transition: width 0.3s ease;
@@ -146,8 +146,8 @@
         
         .clicker-container {
             position: relative;
-            width: 200px;
-            height: 200px;
+            width: clamp(180px, 60vmin, 250px);
+            height: clamp(180px, 60vmin, 250px);
         }
         
         .clicker {
@@ -224,7 +224,7 @@
         }
         
         .menu-icon img {
-            width: 30px;
+            width: 1.8rem;
         }
         
         .page {
@@ -401,4 +401,69 @@
         .pixelated {
             image-rendering: pixelated;
             image-rendering: crisp-edges;
+        }
+
+        /* Адаптивные стили добавлены в конец */
+        @media (max-width: 480px) {
+            .top-bar {
+                margin: 0.8rem;
+                padding: 8px 12px;
+            }
+
+            .balance-value {
+                font-size: clamp(28px, 9vw, 32px);
+            }
+
+            .cont-bs {
+                top: 5%;
+            }
+
+            .cont-energy {
+                bottom: 1vh;
+            }
+
+            .clicker-container {
+                width: 55vmin;
+                height: 55vmin;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .top-bar {
+                margin: 1.5rem;
+                padding: 15px 20px;
+            }
+
+            .balance-value {
+                font-size: 40px;
+            }
+
+            .cont-energy {
+                bottom: 3vh;
+            }
+        }
+
+        @media (orientation: landscape) {
+            body {
+                overflow-y: auto;
+            }
+
+            .main-container {
+                justify-content: flex-start;
+                padding-top: 2rem;
+            }
+
+            .cont-bs {
+                top: 3%;
+            }
+
+            .cont-energy {
+                bottom: 1vh;
+            }
+
+            .clicker-container {
+                width: 40vmin;
+                height: 40vmin;
+                margin: 2rem 0;
+            }
         }
