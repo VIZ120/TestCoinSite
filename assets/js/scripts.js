@@ -70,22 +70,26 @@ clicker.addEventListener('click', clickerEventListener);
 
 // Навигация по меню
 menuItems.forEach(item => {
-    item.addEventListener('click', function(e) {
+    item.addEventListener('click', function (e) {
         e.preventDefault();
         const targetPage = this.getAttribute('data-page');
-        
-        // Деактивируем все элементы меню
+        const iconId = this.getAttribute('data-icon');
+
+        // Удаляем активный класс у всех
         menuItems.forEach(i => i.classList.remove('active'));
-        
-        // Скрываем все страницы
         pages.forEach(p => p.classList.remove('active'));
-        
-        // Активируем нужный элемент меню
+
+        // Активируем текущий
         this.classList.add('active');
-        
-        // Показываем нужную страницу или скрываем все для показа главной
         if (targetPage !== 'home') {
             document.getElementById(targetPage).classList.add('active');
+        }
+
+        // Воспроизводим соответствующую анимацию один раз
+        const lottiePlayer = document.getElementById(iconId);
+        if (lottiePlayer) {
+            lottiePlayer.stop();  // Сначала остановим
+            lottiePlayer.play();  // Потом проиграем один раз
         }
     });
 });
